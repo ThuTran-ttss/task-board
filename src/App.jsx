@@ -3,7 +3,12 @@ import "./App.css";
 
 function App () {
   const [input,setInput] = useState (""); // Tạo input rỗng, cập nhật giá trị bằng setInput
-  const [task,setTask] = useState([]); // Tạo mảng lưu danh sách task
+  const initialTasks = [
+  { id: '1', title: 'Learn React', status: 'todo' },
+  { id: '2', title: 'Build Todo App', status: 'in-progress' },
+  { id: '3', title: 'Review PR', status: 'done' },
+];
+  const [task,setTask] = useState(initialTasks); // Tạo mảng lưu danh sách task
   const [status,setStatus] = useState("ToDo"); // Tạo status cho task
   const [search, setSearch] = useState (""); // Search
   const[filter, setFilter] = useState ("all"); //Filter
